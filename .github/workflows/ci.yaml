@@ -3,9 +3,9 @@ name: ci
 
 on:
   push:
-    branchs: [main, develop]
+    branchs: [main]
   pull_request:
-    branches: [main, develop]
+    branches: [main]
 
 jobs:
   quality:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       
-      - name: Unit tests
+      - name: Tests
         uses: actions/setup-node@v2
         with:
           node-version: 16
