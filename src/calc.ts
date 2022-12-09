@@ -21,4 +21,8 @@ export default class Calc {
         const trigonometry = new Trigonometry();
         return trigonometry.circleArea(r);
     }
+    cylinderVolume(r: number, h: number) {
+        const trigonometry = new Trigonometry();
+        return trigonometry.cylinderVolume(r, h);
+    }
 }

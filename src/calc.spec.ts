@@ -27,4 +27,8 @@ describe('Testing Calc', () => {
     expect(sut.circleArea(3)).toBe(11);
   });
 
+  test('The volume of ​​the cylinder with radius 5 and height 8 must be 104', () => {
+    expect(sut.cylinderVolume(5, 8)).toBe(104);
+  });
+
 });
