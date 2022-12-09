@@ -1,0 +1,25 @@
+---
+name: ci
+
+on:
+  push:
+    branchs: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Unit tests
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm test
+      
+      - name: MegaLinter
+        uses: oxsecurity/megalinter@v6.15.0
